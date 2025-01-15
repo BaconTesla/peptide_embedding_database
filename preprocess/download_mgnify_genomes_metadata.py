@@ -30,6 +30,6 @@ mgnify_genomes = [f'{m[0]}-{m[1]}/{m[2]}' if len(m) > 2 else '/'.join(m) for m i
 
 for i in range(0, len(biomes)):
     target_dir = os.path.join('Biome', biomes[i], 'metadata')
-    url = os.path.join(prefix, genomes, suffix)
+    url = os.path.join(prefix, mgnify_genomes[i], suffix)
     filename = suffix
     download_file(url, target_dir, filename)
